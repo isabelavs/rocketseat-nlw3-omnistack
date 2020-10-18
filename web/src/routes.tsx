@@ -2,14 +2,19 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Landing from './pages/Landing';
-import Map from './pages/LocalsMap';
+import PlacesMap from './pages/PlacesMap';
+import Place from './pages/Place';
+import CreatePlace from './pages/CreatePlace';
 
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/locals-map" component={Map} />
+        <Route path="/places-map" component={PlacesMap} />
+
+        <Route path="/places/create" component={CreatePlace} />
+        <Route path="/places/:id" component={Place} />
       </Switch>
     </BrowserRouter>
   );
